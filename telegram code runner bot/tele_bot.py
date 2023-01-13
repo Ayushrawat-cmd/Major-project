@@ -1,9 +1,10 @@
 from flask import Flask
 from flask import request
 from flask import Response
+import os
 import requests
  
-TOKEN = "5678283118:AAFNSdVhT4SclLktCy74UL__YymwY2b20ac"
+TOKEN = os.getenv('TOKEN')
 app = Flask(__name__)
 url = f'https://api.telegram.org/bot{TOKEN}/sendMessage?url=https://49a1-2409-4050-e31-4464-144f-cd65-7dd-c08.in.ngrok.io'
  
